@@ -8,17 +8,15 @@
 
 class Character {
   private:
-    Character() : Character(Human(), Stats()) {}
-
-    Character(Stats stats) : Character(Human(), stats) {}
-
-    Character(Race race) : Character(race, Stats()) {}
-
     Character(Race race, Stats stats) : m_race(race), m_stats(stats) {
       this->m_max_health = this->stats().hit_die() + 
         this->stats().con_mod() + this->race().con_bonus();
       this->m_cur_health = this->m_max_health;
     }
+
+    Character(Stats stats) : Character(Human(), stats) {}
+    Character(Race race) : Character(race, Stats()) {}
+    Character() : Character(Human(), Stats()) {}
 
     Stats m_stats;
     Race m_race;

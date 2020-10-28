@@ -13,6 +13,8 @@ class Race {
       : m_str_bonus(str), m_dex_bonus(dex), m_con_bonus(con),
       m_wis_bonus(wis), m_int_bonus(intel) {}
 
+    Race() : Race(0,0,0,0,0) {}
+
     int str_bonus() { return m_str_bonus; }
     int dex_bonus() { return m_dex_bonus; }
     int con_bonus() { return m_con_bonus; }
