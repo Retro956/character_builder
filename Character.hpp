@@ -66,20 +66,32 @@ class Character {
       public:
         CharacterFactory() {}
 
-        static Character NewHuman(Stats stats) {
-          return { Human(), stats };
-        }
-
-        static Character NewOrc(Stats stats) {
-          return { Orc(), stats };
+        static Character NewDwarf(Stats stats) {
+          return { Dwarf(), stats };
         }
 
         static Character NewElf(Stats stats) {
           return { Elf(), stats };
         }
 
+        static Character NewGnome(Stats stats) {
+          return { Gnome(), stats };
+        }
+
         static Character NewGoblin(Stats stats) {
           return { Goblin(), stats };
+        }
+
+        static Character NewHalfling(Stats stats) {
+          return { Halfling(), stats };
+        }
+
+        static Character NewHuman(Stats stats) {
+          return { Human(), stats };
+        }
+
+        static Character NewOrc(Stats stats) {
+          return { Orc(), stats };
         }
 
         // These will be used for random race generation with 
