@@ -31,6 +31,31 @@ class Race {
 
 };
 
+class Dwarf : public Race {
+  public:
+    Dwarf() : Race(2, -1, 2, 0, 0) {}
+};
+
+class Elf : public Race {
+  public:
+    Elf() : Race(0, 2, -2, 1, 1) {}
+};
+
+class Gnome : public Race {
+  public:
+    Gnome() : Race(-1, 2, -1, 2, 2) {}
+};
+
+class Goblin : public Race {
+  public:
+    Goblin() : Race(-1, 2, -1, 0, 2) {}
+};
+
+class Halfling : public Race {
+  public:
+    Halfling() : Race(-1, 2, 0, 2, 2) {}
+};
+
 class Human : public Race {
   public:
     Human() : Race(1, 0, 0, 1, 1) {}
@@ -39,16 +64,6 @@ class Human : public Race {
 class Orc : public Race {
   public:
     Orc() : Race(2, -1, 2, -2, 0) {}
-};
-
-class Elf : public Race {
-  public:
-    Elf() : Race(0, 2, -2, 1, 1) {}
-};
-
-class Goblin : public Race {
-  public:
-    Goblin() : Race(-1, 2, -1, 0, 2) {}
 };
 
 #endif // RACE_HPP
