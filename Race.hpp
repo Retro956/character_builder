@@ -4,9 +4,13 @@
 class Race {
   protected:
     int m_str_bonus;
+
     int m_dex_bonus;
+
     int m_con_bonus;
+
     int m_wis_bonus;
+
     int m_int_bonus;
   public:
     Race(int str, int dex, int con, int wis, int intel)
@@ -16,10 +20,15 @@ class Race {
     Race() : Race(0,0,0,0,0) {}
 
     int str_bonus() { return m_str_bonus; }
+
     int dex_bonus() { return m_dex_bonus; }
+
     int con_bonus() { return m_con_bonus; }
+
     int wis_bonus() { return m_wis_bonus; }
+
     int int_bonus() { return m_int_bonus; }
+
 };
 
 class Human : public Race {

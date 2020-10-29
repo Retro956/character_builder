@@ -15,26 +15,39 @@ class Character {
     }
 
     Character(Stats stats) : Character(Human(), stats) {}
+
     Character(Race race) : Character(race, Stats()) {}
+
     Character() : Character(Human(), Stats()) {}
 
     Stats m_stats;
+
     Race m_race;
 
     int m_max_health;
+
     int m_cur_health;
   public:
     Stats& stats() { return m_stats; }
+
     Race& race() { return m_race; }
+
     int attack();
+
     int health() { return m_cur_health; }
+
     int max_health() { return m_max_health; }
 
     int strength() { return stats().str_mod() + race().str_bonus(); }
+
     int dexterity() { return stats().dex_mod() + race().dex_bonus(); }
+
     int constitution() { return stats().con_mod() + race().con_bonus(); }
+
     int wisdom() { return stats().wis_mod() + race().wis_bonus(); }
+
     int intelligence() { return stats().int_mod() + race().int_bonus(); }
+
     int hit_die() { return stats().hit_die(); }
 
     // Will eventually move this function to a "display" module of 
