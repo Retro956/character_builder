@@ -3,7 +3,7 @@
 
 int main() {
 
-  auto Hero = Character::CharacterFactory::NewGnome(BaseFighterStats());
+  auto Hero = Character::CharacterFactory::NewOrc(new BaseFighterStats());
 
   Hero.display_stats();
 
