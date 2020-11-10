@@ -1,5 +1,4 @@
 #include "Character.hpp"
-#include <iostream>
 
 int main() {
 

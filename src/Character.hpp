@@ -3,8 +3,8 @@
 
 #include "Stats.hpp"
 #include "Race.hpp"
+#include "Inventory.hpp"
 
-#include <iostream>
 #include <memory>
 
 class Character {
