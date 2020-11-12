@@ -19,6 +19,8 @@ Character::Character(Race* race) : Character(race, new Stats()) {}
 
 Character::Character() : Character(new Human(), new Stats()) {}
 
+// Accessors
+
 Stats& Character::stats() { return *m_stats; }
 
 Race& Character::race() { return *m_race; }
@@ -43,6 +45,8 @@ int Character::hit_die() { return stats().hit_die(); }
 
 std::shared_ptr<Inventory> Character::inventory() { return m_inv; }
 
+// Functions
+
 void Character::display_stats()
 {
   std::cout << "HEALTH: " << this->health() << "/" << this->max_health() << '\n';
@@ -53,6 +57,8 @@ void Character::display_stats()
   std::cout << "WIS: " << this->wisdom() << '\n';
   std::cout << "INT: " << this->intelligence() << '\n';
 }
+
+// Factory Related
 
 Character Character::CharacterFactory::NewDwarf(Stats* stats)
 {
