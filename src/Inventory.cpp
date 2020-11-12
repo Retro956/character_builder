@@ -11,10 +11,6 @@ Inventory::~Inventory()
 {
 }
 
-void Inventory::expand()
-{
-}
-
 void Inventory::add_item(const Item& item)
 {
   if(m_num_of_items >= m_capacity) {
