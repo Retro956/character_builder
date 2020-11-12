@@ -8,15 +8,24 @@ class Inventory
 {
   private:
     int m_capacity;
+
     int m_num_of_items;
+
     std::shared_ptr<std::shared_ptr<Item>[]> m_item_arr;
+
     void expand();
+
     void initialize(const int start);
+
   public:
     Inventory();
+
     ~Inventory();
+
     void add_item(const Item& item);
+
     std::shared_ptr<Item> get_item(int index);
+
     void remove_item(int index);
     
     inline void debug_print() const

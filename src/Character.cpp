@@ -3,7 +3,8 @@
 Character::Character(Race* race, Stats* stats)
   : m_race(race)
   , m_stats(stats)
-  , m_inv(std::make_shared<Inventory>())
+  , m_inventory(std::make_shared<Inventory>())
+  , m_equipment(std::make_shared<Equipment>())
 {
   this->m_max_health = 
     this->stats().hit_die() +
@@ -25,7 +26,9 @@ Stats& Character::stats() { return *m_stats; }
 
 Race& Character::race() { return *m_race; }
 
-int Character::attack() { return 1; }
+int Character::attack() {
+  return this->m_equipment->get_weapon()->get_damage() + this->strength();
+}
 
 int Character::health() { return m_cur_health; }
 
@@ -43,7 +46,9 @@ int Character::intelligence() { return stats().int_mod() + race().int_bonus(); }
 
 int Character::hit_die() { return stats().hit_die(); }
 
-std::shared_ptr<Inventory> Character::inventory() { return m_inv; }
+std::shared_ptr<Inventory> Character::inventory() { return m_inventory; }
+
+std::shared_ptr<Equipment> Character::equipment() { return m_equipment; }
 
 // Functions
 

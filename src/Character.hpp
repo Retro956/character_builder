@@ -4,6 +4,7 @@
 #include "Stats.hpp"
 #include "Race.hpp"
 #include "Inventory.hpp"
+#include "Equipment.hpp"
 
 class Character
 {
@@ -20,7 +21,9 @@ class Character
 
     std::shared_ptr<Race> m_race;
 
-    std::shared_ptr<Inventory> m_inv;
+    std::shared_ptr<Inventory> m_inventory;
+
+    std::shared_ptr<Equipment> m_equipment;
 
     int m_max_health;
 
@@ -50,6 +53,8 @@ class Character
     int hit_die();
 
     std::shared_ptr<Inventory> inventory();
+
+    std::shared_ptr<Equipment> equipment();
 
     void display_stats();
 
