@@ -7,4 +7,4 @@ Weapon::Weapon(std::string name, std::string desc, int dice, int bonus)
 {
 }
 
-int Weapon::get_damage() { return (rand() % m_dice + 1) + m_bonus; }
+int Weapon::get_damage() const { return (rand() % m_dice + 1) + m_bonus; }

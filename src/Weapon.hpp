@@ -10,7 +10,7 @@ class Weapon : public Item {
   public:
     Weapon(std::string name, std::string desc, int dice, int bonus);
 
-    int get_damage();
+    int get_damage() const;
 
 };
 

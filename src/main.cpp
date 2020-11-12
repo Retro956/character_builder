@@ -14,7 +14,5 @@ int main()
 
   Hero.inventory()->debug_print();
 
-  std::cout << Hero.inventory()->get_item(0)->debug_print() << '\n';
-
   return 0;
 }
