@@ -54,6 +54,7 @@ std::shared_ptr<Equipment> Character::equipment() { return m_equipment; }
 
 void Character::display_stats()
 {
+  std::cout << "===== Character =====\n";
   std::cout << "HEALTH: " << this->health() << "/" << this->max_health() << '\n';
   std::cout << "HIT_DIE: " << this->hit_die() << '\n';
   std::cout << "STR: " << this->strength() << '\n';
@@ -61,6 +62,7 @@ void Character::display_stats()
   std::cout << "CON: " << this->constitution() << '\n';
   std::cout << "WIS: " << this->wisdom() << '\n';
   std::cout << "INT: " << this->intelligence() << '\n';
+  std::cout << "=====================\n";
 }
 
 // Factory Related

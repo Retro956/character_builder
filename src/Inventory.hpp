@@ -13,10 +13,6 @@ class Inventory
 
     std::shared_ptr<std::shared_ptr<Item>[]> m_item_arr;
 
-    void expand();
-
-    void initialize(const int start);
-
   public:
     Inventory();
 
@@ -27,7 +23,9 @@ class Inventory
     std::shared_ptr<Item> get_item(int index);
 
     void remove_item(int index);
-    
+
+    void inv_to_string();
+
     inline void debug_print() const
     {
       for(size_t i = 0; i < this->m_num_of_items; i++)

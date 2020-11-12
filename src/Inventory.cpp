@@ -28,3 +28,11 @@ std::shared_ptr<Item> Inventory::get_item(int index)
 void Inventory::remove_item(int index)
 {
 }
+
+void Inventory::inv_to_string() {
+  std::cout << "===== Inventory =====\n";
+  for(size_t i = 0; i < this->m_num_of_items; i++)
+    std::cout << i+1 << ". " << this->m_item_arr.get()[i]->debug_print() << '\n';
+  std::cout << "=====================\n";
+}
+
