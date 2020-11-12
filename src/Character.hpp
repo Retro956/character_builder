@@ -5,8 +5,6 @@
 #include "Race.hpp"
 #include "Inventory.hpp"
 
-#include <memory>
-
 class Character
 {
   private:

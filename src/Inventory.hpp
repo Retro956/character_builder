@@ -3,7 +3,6 @@
 
 #include "Item.hpp"
 #include <memory>
-#include <vector>
 
 class Inventory
 {
