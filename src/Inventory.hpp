@@ -16,6 +16,7 @@ class Inventory
     Inventory();
     ~Inventory();
     void add_item(const Item& item);
+    std::shared_ptr<Item> get_item(int index);
     void remove_item(int index);
     
     inline void debug_print() const

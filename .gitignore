@@ -1,4 +1,5 @@
 *.out
 *.exe
+Makefile
 ignore_me/*
 

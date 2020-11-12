@@ -20,6 +20,11 @@ void Inventory::add_item(const Item& item)
   this->m_item_arr[this->m_num_of_items++] = std::make_shared<Item>(Item(item));
 }
 
+std::shared_ptr<Item> Inventory::get_item(int index)
+{
+  return this->m_item_arr[index];
+}
+
 void Inventory::remove_item(int index)
 {
 }
