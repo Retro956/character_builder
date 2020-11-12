@@ -7,24 +7,11 @@ int main()
 
   Hero.display_stats();
 
-  Inventory inv;
+  Hero.inventory()->add_item(Item());
+  Hero.inventory()->add_item(Item());
+  Hero.inventory()->add_item(Item());
 
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-  inv.add_item(Item());
-
-  inv.debug_print();
-
-  std::cout << inv.get_num_of_items() << '\n';
+  Hero.inventory()->debug_print();
 
   return 0;
 }

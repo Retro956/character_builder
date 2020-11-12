@@ -22,6 +22,8 @@ class Character
 
     std::shared_ptr<Race> m_race;
 
+    std::shared_ptr<Inventory> m_inv;
+
     int m_max_health;
 
     int m_cur_health;
@@ -48,6 +50,8 @@ class Character
     int intelligence();
 
     int hit_die();
+
+    std::shared_ptr<Inventory> inventory();
 
     void display_stats();
 

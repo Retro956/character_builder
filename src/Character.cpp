@@ -3,6 +3,7 @@
 Character::Character(Race* race, Stats* stats)
   : m_race(race)
   , m_stats(stats)
+  , m_inv(std::make_shared<Inventory>())
 {
   this->m_max_health = 
     this->stats().hit_die() +
@@ -39,6 +40,8 @@ int Character::wisdom() { return stats().wis_mod() + race().wis_bonus(); }
 int Character::intelligence() { return stats().int_mod() + race().int_bonus(); }
 
 int Character::hit_die() { return stats().hit_die(); }
+
+std::shared_ptr<Inventory> Character::inventory() { return m_inv; }
 
 void Character::display_stats()
 {
