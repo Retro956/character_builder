@@ -40,7 +40,8 @@ int Character::intelligence() { return stats().int_mod() + race().int_bonus(); }
 
 int Character::hit_die() { return stats().hit_die(); }
 
-void Character::display_stats() {
+void Character::display_stats()
+{
   std::cout << "HEALTH: " << this->health() << "/" << this->max_health() << '\n';
   std::cout << "HIT_DIE: " << this->hit_die() << '\n';
   std::cout << "STR: " << this->strength() << '\n';

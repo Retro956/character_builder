@@ -2,13 +2,15 @@
 #define INVENTORY_HPP
 
 #include "Item.hpp"
+#include <memory>
+#include <vector>
 
 class Inventory
 {
   private:
     int m_capacity;
     int m_num_of_items;
-    Item** m_item_arr;
+    std::shared_ptr<std::shared_ptr<Item>[]> m_item_arr;
     void expand();
     void initialize(const int start);
   public:
@@ -20,8 +22,10 @@ class Inventory
     inline void debug_print() const
     {
       for(size_t i = 0; i < this->m_num_of_items; i++)
-        std::cout << this->m_item_arr[i]->debug_print() << std::endl;
+        std::cout << this->m_item_arr.get()[i]->debug_print() << std::endl;
     }
+
+    inline int get_num_of_items() { return m_num_of_items; }
 };
 
 #endif // INVENTORY_HPP

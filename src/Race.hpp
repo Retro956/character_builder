@@ -1,7 +1,8 @@
 #ifndef RACE_HPP
 #define RACE_HPP
 
-class Race {
+class Race
+{
   protected:
     int m_str_bonus;
 
@@ -29,37 +30,44 @@ class Race {
 
 };
 
-class Dwarf : public Race {
+class Dwarf : public Race
+{
   public:
     Dwarf();
 };
 
-class Elf : public Race {
+class Elf : public Race
+{
   public:
     Elf();
 };
 
-class Gnome : public Race {
+class Gnome : public Race
+{
   public:
     Gnome();
 };
 
-class Goblin : public Race {
+class Goblin : public Race
+{
   public:
     Goblin();
 };
 
-class Halfling : public Race {
+class Halfling : public Race
+{
   public:
     Halfling();
 };
 
-class Human : public Race {
+class Human : public Race
+{
   public:
     Human();
 };
 
-class Orc : public Race {
+class Orc : public Race
+{
   public:
     Orc();
 };

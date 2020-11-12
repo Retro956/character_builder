@@ -7,7 +7,8 @@
 
 #include <memory>
 
-class Character {
+class Character
+{
   private:
     Character(Race* race, Stats* stats);
 
@@ -50,7 +51,8 @@ class Character {
 
     void display_stats();
 
-    class CharacterFactory {
+    class CharacterFactory
+    {
       public:
         CharacterFactory() {}
 
