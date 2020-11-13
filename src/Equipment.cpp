@@ -21,3 +21,4 @@ void Equipment::equip_armor(std::shared_ptr<Armor>& armor)
 }
 
 Weapon* Equipment::get_weapon() const { return m_weapon.get(); }
+

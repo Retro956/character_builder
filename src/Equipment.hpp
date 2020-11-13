@@ -17,7 +17,6 @@ class Equipment {
     void equip_armor(std::shared_ptr<Armor>& armor);
 
     Weapon* get_weapon() const;
-
 };
 
 #endif // EQUIPMENT_HPP
