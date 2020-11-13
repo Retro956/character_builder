@@ -27,7 +27,6 @@ class Inventory
       for(size_t i = 0; i < this->m_num_of_items; i++)
         std::cout << this->m_item_arr.get()[i]->debug_print() << std::endl;
     }
-
 };
 
 #endif // INVENTORY_HPP
