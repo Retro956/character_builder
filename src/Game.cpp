@@ -6,10 +6,7 @@ Game::Game()
 }
 
 bool Game::running() { return m_running; }
-
 void Game::exit() { this->m_running = false; }
-
-int Game::choice() { return m_choice; }
 
 void Game::main_menu()
 {

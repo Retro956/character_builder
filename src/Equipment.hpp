@@ -14,7 +14,6 @@ class Equipment {
     ~Equipment();
 
     void equip_weapon(std::shared_ptr<Weapon>& weapon);
-
     void equip_armor(std::shared_ptr<Armor>& armor);
 
     Weapon* get_weapon() const;

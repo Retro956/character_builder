@@ -12,7 +12,6 @@ class Game {
 
     bool running();
     void exit();
-    int choice();
 
     void main_menu();
 };
