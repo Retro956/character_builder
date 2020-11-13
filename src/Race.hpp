@@ -5,27 +5,18 @@ class Race
 {
   protected:
     int m_str_bonus;
-
     int m_dex_bonus;
-
     int m_con_bonus;
-
     int m_wis_bonus;
-
     int m_int_bonus;
+
   public:
     Race(int str, int dex, int con, int wis, int intel);
-
     Race();
-
     int str_bonus();
-
     int dex_bonus();
-
     int con_bonus();
-
     int wis_bonus();
-
     int int_bonus();
 
 };

@@ -12,6 +12,8 @@ int main()
   std::shared_ptr<Weapon> test2 = std::make_shared<Weapon>("Shortsword", "A Standard Shortsword.", 6, 0);
   std::shared_ptr<Armor> test3 = std::make_shared<Armor>("Bronze Chestpiece", "A Standard Chestpiece.", 1);
 
+  Hero.equipment()->equip_weapon(test);
+
   do {
     game.main_menu();
 

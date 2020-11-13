@@ -14,13 +14,9 @@ Race::Race() : Race(0,0,0,0,0)
 }
 
 int Race::str_bonus() { return m_str_bonus; }
-
 int Race::dex_bonus() { return m_dex_bonus; }
-
 int Race::con_bonus() { return m_con_bonus; }
-
 int Race::wis_bonus() { return m_wis_bonus; }
-
 int Race::int_bonus() { return m_int_bonus; }
 
 Dwarf::Dwarf() : Race(2, -1, 2, 0, 0)

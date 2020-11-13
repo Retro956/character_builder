@@ -15,15 +15,10 @@ Character::Character(Race* race, Stats* stats)
 }
 
 Character::Character(Stats* stats) : Character(new Human(), stats) {}
-
 Character::Character(Race* race) : Character(race, new Stats()) {}
-
 Character::Character() : Character(new Human(), new Stats()) {}
 
-// Accessors
-
 Stats& Character::stats() { return *m_stats; }
-
 Race& Character::race() { return *m_race; }
 
 int Character::attack() {
@@ -31,26 +26,16 @@ int Character::attack() {
 }
 
 int Character::health() { return m_cur_health; }
-
 int Character::max_health() { return m_max_health; }
-
 int Character::strength() { return stats().str_mod() + race().str_bonus(); }
-
 int Character::dexterity() { return stats().dex_mod() + race().dex_bonus(); }
-
 int Character::constitution() { return stats().con_mod() + race().con_bonus(); }
-
 int Character::wisdom() { return stats().wis_mod() + race().wis_bonus(); }
-
 int Character::intelligence() { return stats().int_mod() + race().int_bonus(); }
-
 int Character::hit_die() { return stats().hit_die(); }
 
 std::shared_ptr<Inventory> Character::inventory() { return m_inventory; }
-
 std::shared_ptr<Equipment> Character::equipment() { return m_equipment; }
-
-// Functions
 
 void Character::display_stats()
 {
@@ -64,8 +49,6 @@ void Character::display_stats()
   std::cout << "INT: " << this->intelligence() << '\n';
   std::cout << "=====================\n";
 }
-
-// Factory Related
 
 Character Character::CharacterFactory::NewDwarf(Stats* stats)
 {
